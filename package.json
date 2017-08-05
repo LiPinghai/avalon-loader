@@ -1,0 +1,52 @@
+{
+  "name": "avalon-loader",
+  "version": "0.0.1",
+  "keywords": [
+    "avalon.js",
+    "avalon",
+    "avn",
+    "webpack",
+    "loader"
+  ],
+  "description": "webpack loader for avalon.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "eslint lib --quiet"
+  },
+  "eslintConfig": {
+    "extends": "mo"
+  },
+  "maintainers": [ {
+    "name": "LiPinghai",
+    "email": "twopoles@163.com"
+  } ],
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^6.3.6",
+    "es6-promise": "^3.2.1",
+    "es6-templates": "^0.2.2",
+    "fastparse": "^1.1.1",
+    "hash-sum": "^1.0.2",
+    "loader-utils": "^0.2.15",
+    "lru-cache": "^4.0.1",
+    "object-assign": "^4.1.0",
+    "parse5": "^2.1.5",
+    "postcss": "^5.0.21",
+    "postcss-selector-parser": "^2.1.0",
+    "source-map": "^0.5.6"
+  },
+  "peerDependencies": {
+    "avalon2": "*",
+    "css-loader": "*",
+    "style-loader": "*",
+    "babel-runtime": "^6.0.0",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-loader": "^6.2.4",
+    "babel-core": "^6.10.4",
+    "babel-preset-es2015": "^6.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.15.0",
+    "eslint-config-mo": "^0.2.0"
+  }
+}
