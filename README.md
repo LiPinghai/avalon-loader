@@ -1,6 +1,6 @@
 # avalon-loader
 
-> webpack loader for [avalonJs](https://github.com/RubyLouvre/avalon), base on [regular-loader](https://github.com/regularjs/regular-loader)
+> webpack loader for [avalonJs](https://github.com/RubyLouvre/avalon)
 
 ## Thanks
 
