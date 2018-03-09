@@ -8,7 +8,7 @@
     "webpack",
     "loader"
   ],
-  "description": "webpack loader for avalon.js",
+  "description": "A single-file webpack loader for avalon.js",
   "main": "lib/index.js",
   "scripts": {
     "test": "eslint lib --quiet"
