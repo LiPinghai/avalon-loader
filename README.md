@@ -90,7 +90,7 @@ test.avn
   </div>
 </template>
 <script>
-import 'inner.avn';
+import './inner.avn';
 export default {
   name: 'ms-test',
   defaults:{
