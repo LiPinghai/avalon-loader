@@ -1,7 +1,7 @@
 module.exports = function( content ) {
   this.cacheable();
 
-  var compiled = content.html;
+  var compiled = content.html.replace(/\n/g,'');
 
   return {
     compiled: compiled,

@@ -14,7 +14,7 @@ module.exports = function( content ) {
   var options = this.options.avalon || {};
   var filePath = this.resourcePath;
   var fileName = path.basename( filePath );
-  var moduleId = '_r-' + hash( filePath );
+  var moduleId = 'avn_' + hash( filePath );
   var rewriterInjectRE = /\b(css(-loader)?(\?[^!]+)?)(?:!|$)/
   var selectorPath = require.resolve( './selector' );
   var precompileLoaderPath = require.resolve( './precompile' );
@@ -139,9 +139,9 @@ module.exports = function( content ) {
   // require template
   var template;
   if ( parts.template.length ) {
+    // only the first element
     template = parts.template[ 0 ]
-    output += '__avalon_template__ = ' + JSON.stringify( template.content ) + ';'
-      // output += '__avalon_template__ = ' + getRequire( 'template', template, 0, hasScopedStyle )
+      output += '__avalon_template__ = ' + getRequire( 'template', template, 0, hasScopedStyle )
   }
 
   // find Avalon
