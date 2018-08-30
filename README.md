@@ -76,13 +76,16 @@ test.avn
 
 ```html
 <style lang="css">
-.test{
-  background: #f00;
-}
+  .container{
+    border: #f00 2px solid;
+    padding: 10px;
+  }
+</style>
 </style>
 <template>
-  <div>
+  <div class="container">
      here is component!
+     <br>
      {{data}}
      <ms-inner>
         <div slot="content">content of inner</div>
@@ -90,7 +93,7 @@ test.avn
   </div>
 </template>
 <script>
-import './inner.avn';
+import 'inner.avn';
 export default {
   name: 'ms-test',
   defaults:{
@@ -100,10 +103,16 @@ export default {
 </script>
 ```
 
-inner.avn
+inner.avn(use *scoped style*)
 ```html
+<style scoped>
+  .container{
+    border: green 2px solid;
+    padding: 10px;
+    margin: 10px;
+  }
 <template>
-  <div class="inner" ms-click="@onClick">
+  <div class="container" ms-click="@onClick">
     {{data}}
     <slot name="content" />
   </div>
@@ -112,7 +121,7 @@ inner.avn
 export default {
   name: 'ms-inner',
   defaults:{
-    data:'inner data',
+    data:'inner data. click here',
     onClick(){
       console.log('onclick')
     }
