@@ -2,7 +2,6 @@ var postcss = require( 'postcss' );
 var selectorParser = require( 'postcss-selector-parser' );
 var loaderUtils = require( 'loader-utils' );
 var assign = require( 'object-assign' );
-var autoprefixer = require( 'autoprefixer' );
 
 function isObject( val ) {
 	return val && typeof val === 'object'
@@ -125,8 +124,7 @@ module.exports = function( content, map ) {
 			// var map = result.map && result.map.toJSON()
 			cb(null, result.css, map)
 		} )
-		.catch( function() {
-			console.log( e );
+		.catch( function(e) {
 			cb( e );
 		} )
 };

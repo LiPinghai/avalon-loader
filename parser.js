@@ -43,9 +43,12 @@ function parse( content, filename, needMap ) {
     // source-map cache busting for hot-reloadded modules
   var filenameWithHash = filename + '?' + cacheKey
   var output = cache.get( cacheKey )
-  if ( output ) return output
+  
+  if ( output ) {
+    return output
+  }
 
-  var output = {
+  output = {
     template: [],
     style: [],
     script: [],
